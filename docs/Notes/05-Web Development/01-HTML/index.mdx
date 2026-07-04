@@ -1,7 +1,5 @@
 # HTML
 
-## Summary
-
 ## \<html>
 
 ```html
@@ -266,7 +264,7 @@ Order of `<head>` elements
 - Represent generic standalone section of a document, that does not fit it in other _Content Sectioning_ tags.
 - Usage
   - Provide `aria-label` or `aria-labelledby`.
-  - Heading inluced most of the times.
+  - Heading included most of the times.
 
 ```html
 <section aria-labelledby="introduction">
@@ -505,13 +503,14 @@ body {
 
 - Hyperlink, file, email addresse, location in the same page.
 - Screen readers display list of all links on the page.
+  - Use `aria-hidden="true"` to prevent link from getting added to the list.
 - Link content (except text) should take at least 44x44 CSS pixels.
 - Usage
   - `<a>Content</a>` - Use _content_ to describe where the link goes.
     - Indicate when link will open in new tab, or is pointing to a resource other than a website. Example `External site (opens in new tab)`. Or `<img src="new-tab.svg" alt="(Opens in new tab)" />`.
   - `downlaod` - Download the URL, with name specified by browser.
-    - `download="filename.extension"` - `\`, `/` converted to `_`.
-  - `href`
+    - `download="filename.extension"` - `\`, `/` are converted to `_`.
+  - `href` - Provide URL.
     - `hreflang` - Provide hint at language of URL.
   - `interestfor` - Popover API.
   - `target` - Where to display URL.
