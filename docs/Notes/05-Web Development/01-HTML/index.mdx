@@ -1,5 +1,70 @@
 # HTML
 
+## Summary
+
+- Content sectioning
+  - `<address>` - Contact information - name, physical address, URL, email address, phone number, social media handle, GPS coordinates.
+  - `<article>` - Independent item of content that can be consumed without the context of the website - blog post, forum post, news article, product card, comments.
+  - `<aside>` - Content that is only indirectly related to the main content, and can be removed without affecting the page - trending topics, call-out box, glossary, footnotes, ads, profile snippet, related articles.
+  - `<footer>` - Concluding content of a section - category tags, author bio, read more links, timestamps, legal disclaimers, copywright notice.
+  - `<header>` - Introductory content or navigational aids - heading element, logo, search form, author name.
+  - `<h1>-<h6>`- Headings to construct table of contents.
+  - `<hgroup>` - Group heading tag with `<p>` tag.
+  - `<main>` - Content unique to the document.
+  - `<nav>` - Provide navigational links either within the current document or to other documents - menus, table of contents, indexes, prose.
+  - `<section>` - Generic standalone section of document, that does not fit in other _Content Sectioning_ tags.
+  - `<search>` - Part of document with `<form>` for search or filtering on the current page or the entire site.
+- Block level elements
+  - `<blockquote>`, `<cite>` - Direct quote from external source.
+  - `<div>` - Group elements and to style elements.
+  - `<dl>`, `<dt>`, `<dd>` - List - key/value pairs.
+  - `<figure>`, `<figcaption>` - Self-contained content that is referenced in the main flow of document, and can be moved to other parts of the document without breaking flow - image, diagram, code snippet, table.
+  - `<hr>` - Thematic break between `<p>` elements - change of scene, shit of topic.
+  - `<menu>`, `<li>` - List - items are interactive.
+  - `<ol>`, `<li>` - List - order of items matter.
+  - `<ul>`, `<li>` - List - order of items does not matter.
+  - `<p>` - Group related content - images, form fields, block of text.
+  - `<pre>` - Show preformatted text.
+- Inline elements
+  - `<a>` - Hyperlink.
+  - `<abbr>` - Abbreviation (e.g.) or acronym (NATO).
+  - `<b>` - Draw attention to content without giving special importance - keywords in summary, product name in review, boldface due to writing convention.
+  - `<bdi>` - Tell browser bidirectional algorithm to treat the content in isolation from its surrounding text.
+  - `<bdo>` - Force browser to render content in the provided direction.
+  - `<br>` - Line break in text, where division of lines is insignificant.
+  - `<code>` - Represent single phrase of code.
+  - `<del>` - Deleted text.
+  - `<dfn>` - Indicate a term, whose definition can be found in the ancestor node.
+  - `<em>` - Indicate stress emphasis.
+  - `<i>` - Make text look different from the normal prose for readability reason, writing convention - technical terms, thoughts.
+  - `<ins>` - Inserted text.
+  - `<kbd>` - Represent user input from some text entry device - keyboard, voice, touch, buttons.
+  - `<mark>` - Denote portion of document's content which is likely to be relevant to the user's current activity - use it for words that match a search operation.
+  - `<q>`, `<cite>` - Direct quote from external source.
+  - `<samp>` - Static system message from computer program.
+  - `<small>` - Side comments and small print - copywright, legal text.
+  - `<span>` - Group related content and to style.
+  - `<strong>` - Indicate content is of strong importance, seriousness, urgency, warnings.
+  - `<sub>` - Subscript.
+  - `<sup>` - Superscript.
+  - `<time>` - Machine readable time representation of a period of time.
+  - `<u>` - Mark text to have non-textual annotation - spelling error.
+  - `<var>` - Represent name of variable - maths equation.
+  - `<wbr>` - Hint to browser for word break opportunity.
+- Media elements
+  - `<audio>`
+  - `<embed>` - Cannot provide fallback content.
+  - `<fencedframe>` - `<iframe>` but with security and privacy features.
+  - `<iframe>`
+  - `<img>`
+  - `<picture>`
+  - `<video>`
+- Scripting elements
+  - `<canvas>`
+  - `<noscript>`
+  - `<script>`
+- Table elements
+
 ## \<html>
 
 ```html
@@ -610,6 +675,18 @@ let y = 2;
 </pre>
 ```
 
+### \<del>, \<ins>
+
+- Range of text that has been deleted or inserted from document.
+- Not announced by screen readers. Use CSS for that.
+- Attributes
+  - `cite` - URI for resource that explains the change.
+  - `datetime` - Time and date of the change.
+
+```html
+<del>text</del> <ins>text</ins>
+```
+
 ### \<dfn>
 
 - Indicate a term, whose definition can be found in the ancestor `<p>`, `<section>`.
@@ -862,7 +939,222 @@ MD5 ("Hello world") = 1231241523456tasd
 https://kushaj<wbr />.com
 ```
 
-## \<table>
+## Media Elements
+
+### \<audio>, \<track>
+
+- Embed sound content.
+  - Use `<source>` to let browser choose the most appropriate.
+  - Provide caption using _WebVTT_ API. `<audio>` does not support WebVTT. `<video>` can be used instead.
+  - Provide transcript.
+  - Provide direct download link.
+- Attributes
+  - `autoplay` - Audio will automatically begin playback.
+  - `controls` - Browser will show controls to control audio playback - volume, seeking, pause/resume.
+  - `controlslist` - To modify the control options shown by browser.
+    - `controlslist="nodownload nofullscreen noremoteplayback"`
+  - `disableremoteplayback` - Disable remote playback.
+  - `loading`
+    - `loading="eager"` - Default. Load audio regardless if it in the viewport.
+    - `loading="lazy"` - Defer loading till the controls reach certain distance from the viewport. If you do not specify `controls` then audio will never load.
+  - `loop` - Audio player will loop at the end of the audio.
+  - `muted` - Audio will initially be muted.
+  - `preload` - Hint to browser.
+    - `preload="none"` - Audio should not be preloaded.
+    - `preload="metadata"` - Only audio metadata is fetched.
+    - `preload="auto"` - Whole audio file can be downloaded, even if user is not expecting to use it.
+  - `src` - URL of audio source.
+
+```html
+<figure>
+  <figcaption>Listen to T-Rex:</figcaption>
+  <audio controls src="">
+    <a href="" download=""> Download fallback link</a>
+  </audio>
+</figure>
+
+<audio controls>
+  <source src="" type="audio/mpeg" />
+  <source src="" type="audio/ogg" />
+
+  <a href="" download="">Download audio file</a>
+</audio>
+```
+
+### \<embed>
+
+- Embed external content in document.
+- Attributes
+  - `height`
+  - `src`
+  - `type`
+  - `width`
+
+```html
+<embed type="image/jpeg" src="" width="250" height="200" />
+```
+
+### \<fencedframe>
+
+- Similar to `<iframe>` but with more privacy features.
+- Cannot access DOM of embedded content. The embedded content cannot access DOM of the parent as well.
+- Cannot be manipulated with JS, except specific APIs.
+- Attributes
+  - `allow` - Permissions given to the embedded content from the parent.
+    - Protected Audience API
+    - Shared Storage API
+  - `height`
+  - `width`
+
+### \<iframe>
+
+- Embed external webpage into the current one.
+
+### \<img>
+
+- Images are not decoded on the main thread.
+- Browsers wait for the image to get near the viewport, before decoding.
+- Images are progressively renderd from top-to-bottom. In case of JPEG-XL, it is from blurry to sharp.
+- Attributes
+  - `alt` - Text replacement for the image's content.
+    - For images inside `<a>`, `<button>` describe what clicking the image does - `alt="next page"`.
+    - Using `alt=""` indicates the image is for decoration, and the broken image icon will not be shown.
+    - Value used when copying image to text, bookmarking an image url.
+  - `decoding`
+    - `decoding="sync"` - Image is decoded in its own thread. While the image is being decoded, the render is blocked. Once the image is decoded, the render step happens.
+    - `decoding="async"` - Image is decoded in its own thread. When it is ready to be showe, it is added to the render step. The main render pipeline is never blocked.
+    - Chrome/Safari use `sync` and Firefox uses `async` as default for images. Wordpress and NextJS uses `async` by default.
+  - `fetchpriority` - Hint to browser when to fetch the image, relative to other images.
+    - `high` - Use for images above the fold to optimize Largest Contentful Paint.
+    - `low`
+    - `auto` - Default. No preference.
+  - `height` - Height of image in pixels.
+  - `loading` - How to load the image
+    - `eager` - Default. Load the image immediately, regardless of whether it is in the visual viewport or not.
+    - `lazy` - Defer loading of image till it reaches a calculated distance from the viewport, as defined by the browser. If the image is part of the initial viewport, then the image loading will not start until the intial page load.
+  - `sizes` - Used when using `srcset` with _width descriptor_.
+    - Specify the intended display size of the image for various media conditions. `(width <= 500px) 1000px`.
+    - `sizes="auto"` - Let browser figure out the size of the rendered image. Use it only for images with `loading="lazy"`.
+  - `src` - Image URL.
+  - `srcset` - Comma separated strings. Provide URL and width of image or pixel density.
+    - `srcset="img2.png 2x"` - Use `img2.png` when the screen has pixel density of 2 times that of standard value, as defined by the browser. Otherwise use `src="img.png"` for normal pixel density displays. Use for fixed size images.
+    - `srcset="img2.png 450w"` - 450 is the intrinsic width of the image, and is divided by the source size defined in `sizes` to determine effective pixel density. Use for responsive images.
+  - `width` - Width of image in pixels.
+
+```html
+<img src="img.png" alt="" srcset="img.png 200w, img2.png 400w" sizes="(width <= 600px) 200px, 50vw" />
+```
+
+### \<picture>
+
+- Provide alternate versions of the image.
+  - Cropping and modifying images for different media conditions.
+  - Offering alternate image formats.
+- Sources are evaluated top-to-bottom, and the first match is shown to the user.
+
+```html
+<picture>
+  <source
+    srcset="small.jpg 480w, medium.jpg 800w, large.jpg 1200w"
+    sizes="(max-width: 600px) 400px, 800px"
+    type="image/jpeg"
+  />
+  <img src="fallback.jpg" alt="Example image" />
+</picture>
+```
+
+### \<source>
+
+- Provide alternate media resources for `<picture>`, `<audio>`, `<video>`.
+- Attributes
+  - `type` - MIME type and codecs information.
+  - `src` - URL of media source. Not needed with `<picture>`.
+  - `srcset` - Similar to `img` and used with `<picture>`.
+    - `sizes`
+  - `media` - Media query for the resource's intended media.
+  - `height`, `width` - For use with `<picture>`.
+
+### \<video>, \<track>
+
+- Provide both captions and transcripts. Caption should not obstruct the main subject of the video.
+- `autoplay` - Videos with unmuted audio, do not autoplay.
+- `controls` - Show browser controls.
+- `controlslist="nodownload nofullscreen noremoteplayback"`
+- `disablepictureinpicture`
+- `disableremoteplayback`
+- `height`, `width` - Pixel value of the media player.
+- `loading`
+  - `eager` - default.
+  - `lazy`
+- `loop`
+- `muted`
+- `playsinline`
+- `poster` - Thumbnail picture url.
+- `preload`
+- `src`
+
+```html
+<video controls width="">
+  <source src="" type="video/webm" />
+  <source src="" type="video/mp4" />
+
+  <a href="" download="">Download video fallback</a>
+</video>
+```
+
+## Scripting elements
+
+### \<canvas>
+
+- Used with WebGL API, Canvas Scripting API to draw graphics and animations.
+  - OffscreenCanvas API can be used to render the canvas using a dedicated worker thread.
+- Browser's have a maximum width and height for canvas.
+- Canvas is not exposed to screen readers.
+- Attributes
+  - `height`
+  - `width`
+
+```html
+<canvas width="120" height="120"> An alternative text describing what your canvas displays. </canvas>
+```
+
+### \<noscript>
+
+- Show block of HTML if scripting is disabled.
+- People using this feature are used to websites breaking. Provide a simple, unobstrusive, and friendly message to enable it.
+- An alternate URL can be provided to use the site without JS.
+
+```html
+<noscript>
+  <p>
+    <strong>Just a quick heads-up!</strong> This site works best with JavaScript enabled. If you prefer to keep it off,
+    you can use our <a href="/no-js-version">Non-JS alternate site</a>.
+  </p>
+</noscript>
+```
+
+### \<script>
+
+- Attributes
+  - `async` - Download in parallel. After downloading, stop rendering and execute the script.
+  - `blocking` - Block certain actions until the script has executed.
+    - `blocking="render"` - Rendering of content is blocked.
+  - `defer` - Download in parallel. Wait for HTML to be parsed, and then execute the script. This happends before `DOMContentLoaded` event.
+  - `fetchpriority` - Hint to browser. `high`, `low`, `auto`.
+  - `integrity` - Provide hash to verify integrityh of script.
+  - `nomodule` - Do not execute the script in browser that support ES modules. Essentially providing fallback for old browsers.
+  - `nonce` - For CSP.
+  - `src` - URI of external script.
+  - `type` - Type of script.
+    - Attribute not set, empty, JS MIME type - Classic script.
+    - `importmap` - Specify how to laod modules when using JS modules.
+    - `module` - JS module. Execution is deferred.
+    - `speculationrules` - What resources to prefetch or prerender.
+    - MIME type
+
+## Table elements
+
+### \<table>
 
 - `role`
   - `role="table"` - Default. Data arranged in rows and columns.
