@@ -1161,9 +1161,6 @@ https://kushaj<wbr />.com
   - `role="grid"` - If table maintains selection state, has two-dimensional navigation, or allows user to rearrange cell order.
   - `role="treegrid"` - If rows of the `grid` can be expanded and collapsed.
   - `role="none"` - When using a table not for its intended purpose.
-- `<caption>` - Table title.
-  - Alternatively provide `aria-label` or `aria-labelledby` on `<table>`.
-  - Provide summary of the table in `<caption>`. Provide longer summary in the `<p>` - connected by `aria-describedby`.
 - `headers` attribute on `<th>` can be used to provide space separated list of `<th>` id's, in case of complex tables.
 
 ```html
@@ -1200,3 +1197,92 @@ https://kushaj<wbr />.com
   </tfoot>
 </table>
 ```
+
+### \<caption>
+
+- Describe the table's purpose, and help people decide if they need to check the rest of the table or skip over it.
+- Alternatively provide `aria-label` or `aria-labelledby` on `<table>`.
+- Provide summary of the table in `<caption>`. Provide longer summary in the `<p>` - connected by `aria-describedby`.
+- `<caption>` should be the first child of `<table>`. Inside a `<figure>`, `<figcaption>` should be used.
+
+### \<colgroup>
+
+- Define group of columns.
+- Define after `<caption>` and before `<thead>`.
+- In CSS
+  - `visibility: collapse;` to hide the entire column.
+  - `width` to specify min-width, as it `min-width` was set.
+- Attribute
+  - `span` - How many columns to span.
+
+```html
+<!-- Example 1 -->
+<colgroup>
+  <col />
+  <col span="2" />
+</colgroup>
+
+<!-- Example 2 -->
+<colgroup span="2"></colgroup>
+<colgroup span="5"></colgroup>
+```
+
+### \<col>
+
+- Define one or more columns in column group. Used when you want to style the columns in a group individually.
+- Attribute
+  - `span`
+
+### \<thead>
+
+- Head of table with information about the table's columns.
+
+### \<tbody>
+
+- Main data of table.
+- Multple `<tbody>` can be used, and each group of rows can be separately formatted.
+- If `<tbody>` is not specified, then browser will add it automatically. This can become an issue with styling, if the quirk is not known.
+
+### \<tfoot>
+
+- Information giving summary of the column - like sum of all numbers in a column.
+
+### \<tr>
+
+- To define row.
+
+### \<th>
+
+- Define header cell. Can be column or row.
+- Best to provide `scope`, in case some assistive technology fails to infer correctly.
+- Attributes
+  - `abbr` - Alternative label.
+  - `colspan` - Max is 1000.
+  - `headers` - space separated strings corresponding to the `id` of `<th>` that provide the headers for this header cell.
+    - If header contains sub-headers, then header will get list of all sub-header's ids.
+    - Sub-headers will get id of the parent.
+
+    ```html
+    <tr>
+      <th id="parent" headers="left right">Left</th>
+    </tr>
+
+    <tr>
+      <th id="left" headers="parent">Left</th>
+      <th id="right" headers="parent">Right</th>
+    </tr>
+    ```
+
+  - `rowspan` - Value of 0, will extend to the end of the grouping section `tbody, tfoot, thead`. Max is 65534.
+  - `scope`
+    - `scope="row"` - header relates to all cells of the row it belongs to
+    - `scope="col"`
+    - `scope="rowgroup"`
+    - `scope="colgroup"`
+
+### \<td>
+
+- Attributes
+  - `colspan`
+  - `headers`
+  - `rowspan`
