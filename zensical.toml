@@ -9,6 +9,9 @@ not_in_nav = """
 extra_css = [
   "styles/extra.css",
 ]
+extra_javascript = [
+  "scripts/extra.js",
+]
 
 # repo_url = "https://github.com/KushajveerSingh/website"
 # repo_name = "KushajveerSingh/website"
@@ -69,6 +72,11 @@ link = "https://github.com/KushajveerSingh"
 name = "Kushaj Sooch on GitHub"
 
 [[project.extra.social]]
+icon = "fontawesome/brands/google-scholar"
+link = "https://scholar.google.com/citations?user=Gs-uiDYAAAAJ&hl=en"
+name = "Kushaj Sooch on Google Scholar"
+
+[[project.extra.social]]
 icon = "fontawesome/brands/instagram"
 link = "https://www.instagram.com/kushajveersingh"
 name = "Kushaj Sooch on Instagram"
@@ -123,3 +131,6 @@ post_url_max_categories = 1
 archive = false
 categories = false
 authors = false
+
+[project.plugins.search]
+enabled = false

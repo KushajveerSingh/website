@@ -33,9 +33,6 @@
 - Skull crusher or overhead extension 3x 15-20 (tricep)
 - Rear delt files 3x 15-20 (shoulder)
 - Lateral raises 3x 15-20 (shoulder)
-- Front squat 3x 8-15 (leg)
-- Romanian deadlift 3x 8-15 (leg)
-- Calf raise 3x 15-20 (calf)
 
 ### Workout B
 
@@ -46,6 +43,3 @@
 - Tricep kickback 3x 15-20 (tricep)
 - Rear delt files 3x 15-20 (shoulder)
 - Lateral raises 3x 15-20 (shoulder)
-- Lunges 3x 12-15 (leg)
-- Front squat 3x 8-15 (leg)
-- Calf raise 3x 15-20 (calf)
