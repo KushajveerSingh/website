@@ -1,0 +1,5 @@
+nav:
+  - Home: index.md
+  - glob: '*'
+    sort:
+      sections: mixed

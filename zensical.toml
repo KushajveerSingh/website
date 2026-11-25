@@ -10,7 +10,7 @@ extra_css = [
   "styles/extra.css",
 ]
 extra_javascript = [
-  "scripts/extra.js",
+  "scripts/extra.js"
 ]
 
 # repo_url = "https://github.com/KushajveerSingh/website"
@@ -134,3 +134,6 @@ authors = false
 
 [project.plugins.search]
 enabled = false
+
+[project.plugins.awesome-nav]
+enabled = true
