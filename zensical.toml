@@ -136,4 +136,3 @@ authors = false
 enabled = false
 
 [project.plugins.awesome-nav]
-enabled = true
