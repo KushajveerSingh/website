@@ -121,6 +121,7 @@
 
 ### Typography
 
+-   [todo-link](https://allo.joshpuckett.me/?ck_subscriber_id=2308324911) Allo font
 -   [todo-link](https://systemfontstack.com/) System Font Stack
     - Find variable system fonts for each operating system
 -   [todo-link](https://typographyforlawyers.com/) Typography for lawyers

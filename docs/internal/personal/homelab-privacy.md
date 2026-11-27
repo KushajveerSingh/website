@@ -2,16 +2,16 @@
 
 ## Homelab
 
-- FUTO Guide
+-   FUTO Guide
     - [link](https://www.youtube.com/watch?v=Et5PPMYuOc8) FUTO's Guide to a Self Managed Life: part 1
     - [link](https://www.youtube.com/watch?v=3fW9TV1WQi8) FUTO's Guide to a Self Managed Life: part 2
     - [link](https://wiki.futo.org/index.php/Introduction_to_a_Self_Managed_Life:_a_13_hour_%26_28_minute_presentation_by_FUTO_software) Introduction to a Self Managed Life: a 13 hour & 28 minute presentation by FUTO software
-- [link](https://www.youtube.com/@FUTOTECH/videos) FUTO youtube videos
-- [link](https://futo.org/) FUTO website
-- [link](https://www.youtube.com/watch?v=OHsJA2uYH-w) HOMELAB: A quick UPDATED look at my homelab...
-- [link](https://www.youtube.com/playlist?list=PLWYPRHLWSBL7mOXFimjxlZ_qChwHmxOUR) Custom Cable Guides by singularity computers
-- [link](https://www.reddit.com/r/linux/comments/1lp2288/sniffnet_a_free_open_source_network_monitoring_app/) Network monitor tool
-- [link](https://quad9.net/) quad9 privacy DNS
+-   [link](https://www.youtube.com/@FUTOTECH/videos) FUTO youtube videos
+-   [link](https://futo.org/) FUTO website
+-   [link](https://www.youtube.com/watch?v=OHsJA2uYH-w) HOMELAB: A quick UPDATED look at my homelab...
+-   [link](https://www.youtube.com/playlist?list=PLWYPRHLWSBL7mOXFimjxlZ_qChwHmxOUR) Custom Cable Guides by singularity computers
+-   [link](https://www.reddit.com/r/linux/comments/1lp2288/sniffnet_a_free_open_source_network_monitoring_app/) Network monitor tool
+-   [link](https://quad9.net/) quad9 privacy DNS
 
 ## Linux Desktop Setup
 
@@ -37,6 +37,7 @@
 - [link](https://www.reddit.com/r/unixporn/wiki/index/) r/unixporn wiki
 - [link](https://docs.ansible.com/#get_started) Ansible
 - [link](https://www.reddit.com/r/unixporn/comments/1bbi7qr/how_do_you_guys_manage_your_dotfiles/) Dotfile manager reddit post
+- [link](https://zellij.dev/features/) Zellij (tmux replacement)
 
 ## Reddit
 
@@ -114,11 +115,11 @@
 
 ### Infrastrucutre
 
-- [link](https://cockpit-project.org/) Cockpit (gui for managing linux servers)
+-   [link](https://cockpit-project.org/) Cockpit (gui for managing linux servers)
     - [link](https://github.com/45Drives/cockpit-navigator) cockpit-navigator (file explorer)
-- [link](https://coolify.io/) Coolify (vercel, netlify, heroku alternative)
-- [link](https://nextcloud.com/) Nextcloud
-- [link](https://www.openstack.org/) OpenStack (cloud infrastructure)
+-   [link](https://coolify.io/) Coolify (vercel, netlify, heroku alternative)
+-   [link](https://nextcloud.com/) Nextcloud
+-   [link](https://www.openstack.org/) OpenStack (cloud infrastructure)
 
 ### Messaging
 
@@ -147,9 +148,9 @@
 
 ### Version control
 
-- [link](https://forgejo.org/) Foregejo
+-   [link](https://forgejo.org/) Foregejo
     - [link](https://forgejo.org/compare-to-gitea/) Comparison with gitea (good reference in general on foss development)
-- [link](https://codeberg.org/user/login) Codeberg
+-   [link](https://codeberg.org/user/login) Codeberg
 
 ## Software
 

@@ -47,6 +47,8 @@
 -   [link](https://ultracycling.com/) Ultracycling
     - [link](https://en.wikipedia.org/wiki/Around_the_world_cycling_record) Around the world
     - [link](https://www.chainbusterracing.com/iron-maiden) 24 hour Iron Maiden
+    - [link](https://www.bicycling.com/rides/a20038645/is-amanda-coker-for-real/) Amanda Coker achievements
+    - [link](https://www.bikeradar.com/advice/fitness-and-training/amy-kyle-hudson-round-the-world-speed-record) Couple cycle around world
 -   [link](https://www.granfondoguide.com/) Gran Fondo
 -   Youtube
     - [link](https://www.youtube.com/@Buzzalong.cycling/videos) BuzzAlong youtube channel
@@ -55,11 +57,13 @@
     - [link](https://www.cyclologic.com/) Cyclo Logic (Bike fitting)
     - [link](https://www.thefreespeedlab.com/) FreeSpeedLab (Bike fitting and other)
     - [link](https://humanpoweredhealth.com/services) Human Powered Health
+    - [link](https://training4ll.com/) Tadej coach training
 -   Training
     - [link](https://boundless10200.com/coaching-training-plans/boundless-base) Boundless Coaching
     - [link](https://mywhoosh.com/) mywhoosh training plan
 -   Learning
     - [link](https://www.youtube.com/playlist?list=PLRzN4bQ3Wq7i8vediNCl-Sd0LNNwEXOYQ) How to ride by CyclingSkills youtube playlist
+    - [link](https://roadmancycling.com/blog) Roadmancycling blog
 
 ### Bowling
 
@@ -71,6 +75,7 @@
 - Border-to-Border Calendar Year Triple Crown 10,000 mile challenge
 - [link](https://mountmarathon.com/) Mount Marathon Race
 - Barkley Marathon
+- [link](https://www.rei.com/learn/expert-advice/what-is-fastpacking.html) Fastpacking
 
 ### Rock climbing
 
@@ -161,6 +166,7 @@
 - [link](https://www.outwardbound.org/) Outward Bound for group trips
 - [link](https://andrewskurka.com/guided-trips/) Andrew Shurka guided trips
 - [link](https://activities.wimhofmethod.com/activities/winter-expedition-sweden-2026/69331) Wim Hof yearly winter expedition Sweden
+- [link](https://www.goruck.com/collections/the-goruck-challenge) The Goruck Challenge
 
 ### Navigation apps
 

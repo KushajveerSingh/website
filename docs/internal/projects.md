@@ -1,186 +1,124 @@
 # Project Ideas
 
-## Personal Values
-
--   Limit network access to core functionality (no automatic check for updates, ...).
-    - Support offline mode. Store local data in simple text formats without encryption so users can view it without the app. If encryption is needed, provide easy access to keys so users can decrypt data outside the app.
--   Make software open-source (optionally open-contribution).
-    -   Provide detailed documentation so users can modify the source code for their needs. This includes writing software that is easy is maintain, and expand. This allows users to debloat the software per their needs. The documentation on customizing software can go as deep as the last if-condition.
-        - For example, if the application supports two payment methods (check and payment processor).
-        - Write each type in a different file, with common API structure.
-        - This allows user to delete one type of payment, or add a third type easily.
-    -   Never force the user to read the source code to infer logic, valid config options.
-    -   Provide detailed documentation on DevOps. This lets advanced users integrate and customize the app within their DevOps environment.
-        - Allow users to run software locally. If the application can benefit from peer-to-peer, add support for that as well.
-        - When applicable, create a centralized website to list local servers.
+-   Network
+    - Access limited to core functionality (no automatic check for updates).
+-   Offline mode
+    - Local data stored in plain text formats.
+    - Data can be accessed without the app.
+    - If encryption is required, keys are provided to user for decryption outside of app.
+-   Open-source and optionally open-contribution.
 -   Meet accessibility standards.
--   No nuisances which includes
-    -   Forced artificial intelligence.
-    -   Recommendation algorithms which need user data, history, third-party info.
-        - Recommendations derived from a user’s follows and their extended network are permitted.
-        - This has downside of confining people to a bubble. Add random recommendations to counter this.
-    -   Dark patterns.
-    -   Forced advertisements.
-    -   Changes to UI/UX should be opt-in, not forced.
-        -   Made new UI available through an opt-in toggle.
-        -   Provide documentation on how to move from old UI to new UI. Split the documentation as
+-   Documentation split in 3 sections
+    -   Feature overview - Screenshot, videos and usage guide of each feature.
+    -   Usage guide
+        - No need to read source to infer software use, logic, config options.
+    -   Source code - How to navigate source code and API documentation.
+        - Goal is to let users debloat the software per their needs.
+        - Detail the logic to the last if-condition, so user does not have to infer the logic/algorithm from the source code.
+-   DevOps setup
+    - Stage 1 - Setup operating system and related software on bare metal.
+    - Stage 2 - Provide operating system image with all software configured.
+    - Stage 3 - Provide software in containerized format and setup on VPS.
+    - Stage 4 - Provide software in popular managed cloud options.
+-   No nuisances
+    -   Artificial Intelligence
+    -   Recommendation algorithms
+    -   Dark patterns
+    -   Advertisements
+    -   UI changes
+        -   Changes made available through opt-in toggle.
+        -   Document moving from old-UI to new-UI
             - New functionality.
             - Deprecated functionality. Provide reason.
             - Moved functionality.
--   Optimize software, till limited by network, disk I/O.
-    - Prefer hardware acceleration.
--   Support greatest number of platforms.
-    -   Ability to use the entire app through API.
-        - Allow users to create plugins.
-    -   Command line support.
-    -   Terminal user interface support. Use API to create simplified interface.
--   Provide an iso file with operating system and ready to use program. This should not require any network access, except for downloading the iso.
-    - Also, provide steps on creating the iso.
--   Remain neutral. Avoid influence from politics, religion, geopolitics, or other external agendas.
--   Respect right to repair. When making hardware do not employ dark patterns to make it harder for people to access, modify, and repair the machine as they wish to.
--   An exception to the rules can be created for organizations that don't respect these rules.
+-   Platforms
+    - Web - Usage through browser
+    - API - Usage through API commands (text file, command line)
+    - Terminal
+    - Native desktop
+    - Native mobile
+    - Virtual reality
+-   No external influence including politics, religion, geopolitics, other external agendas.
+-   Right to repair
+    - Hardware - Do not employ dark patterns to make it harder for people to access, modify, and repair the machine as they wish to.
+    - Software - How to recover from crash, corrupted data.
 
----
+## Better Tech Name
 
-## Personal Website
+-   `bettertechname.kushaj.com`
+-   Come up with alternative names for GPUs/CPUs/RAM/Monitors (desktop, enterprise, mobile).
+-   General strategy: bigger the number better the product.
+    - Consult research papers to understand the architecture of each product.
+    - Each product begins with the year the architecture was released not the product was released.
+-   Have a (autogenerated) section for each product to explain the rationale behind the name.
+-   For USB distill it down to Data and Power (D= and P=).
+-   Also create SVG logos in different sizes for the new names. Smaller logos will have less/compressed info.
+    - The information can be used by people to print stickers.
 
-Take inspiration from
+## ExploreChromium
 
-- https://vale.rocks/posts/the-design-of-this-site#footnote-ref-1
-- https://vale.rocks/posts/the-implementation-of-this-site
-- https://vale.rocks/posts/writing-style-and-mannerisms
-- https://singhkays.com/blog/netflix-av1-decode/ - Use of > and >> in headers
-- add terminal like navigation
-- [Orizon Design](https://www.orizon.co/) has a dot following the cursor
-- Have two dogs playing at the bottom of the screen, jumping and random fighting. You can click on them to shoot or pet.
+- `explorechromium.kushaj.com`
+- Document chromium source code, and learn how the browser works internally.
+- Compile chroimum source code, and make changes while learning.
+- Make each individual component of chromium available as a standalone component and document the usage for the same, and how to build the component in the first place.
+- Expand the project to learn frontend web development. Starting with browser, networking, html, css, js, accessibility, api, frontend framework, tools.
 
-## Microsoft Migrate
+## SimpleBrowser
 
-- For all Microsoft products created Excel, Word, VB Script, Access, Azure create alternate tooling to migrate to. For each tool you will have to look at the various versions throughout the years as well.
+-   `simplebrowser.kushaj.com`
+-   Alongside [ExploreChromium](#explorechromium) build a simplified Rust version of the browser.
+-   As you learn each component chromium, add a section for SimpleBrowser implementing the same.
+-   Add a section of _What if web's backward compataibility is broken_. With the following things built into the browser
+    - Design system.
+    - User profile management. Browser maintains profile information, and a change in browser can trigger change with each website.
+    - Authentication with predefined routes for login, logout, delete.
+    - Using Rust instead of JavaScript.
+    - Removing bloat from html, css.
+-   Create `simplebrowser.kushaj.com` and document all features, usage guide, and link to `explorechroimum.kushaj.com` for source code walkthrough.
 
-## OpenKush
+## OpenDatabase
 
-- Create open source version for services that can be considered basic utilities in modern digital world.
-- Register main domain `openkush.com`.
+-   Limit to Postgres mainly
+    - Relational data - Postgres
+    - In-memory
+    - Search optimized
+    - ScyllaDB - how to use Postgres for this purpose
+-   For Postgres
+    - Go through every article in postgres weekly newsletter.
+    - Documentation and create an admin panel to configure all the settings
+    - Compile from source with all configurable options.
+    - For options which can take multiple values like page size, offer a testing utility which users can use to get the best value.
+    - Provide guide on meaning of all values and how to choose the appropriate one.
+    - [link](https://postgresqlco.nf/) Page listing configuration options and tuning guide.
+-   Look at databases built on top of Postgres and merge their features.
+-   Look at databases outside of Postgres and merge their features.
+-   Tool to create josn schema of all tables, typescript format, format for other languages.
+-   Some queries integrate data from previous years, and the output rarely changes. The output from previous years can be cached. Create interface where you keep track of such queries and update the cache. If intergation can be made on when was the table last modified, the update of query output can be automated.
+-   Development database setup and easier way to run queries in dev mode before pushing to production. In dev mode, add methods to add worst case inputs for the queries. And also test for performance.
+-   For migrations provide two functions for each function. How to upgrade and how to downgrade. And then it is to the user to handle the logic. The software handles the execution of these functions and can be used to roll back 100 migrations if the logic allows it.
+    - During migration we might have to look into load balancing and how to migrate when the database is really huge.
+-   High availability
+    - patroni
+-   Add backup testing, backup restore. Disaster recovery.
+-   Have a test section to test queries like update, delete, create. The section automatically wraps the query in transaction and after you are confident you can commit the transaction.
 
-### OpenPay
+## OpenLaboratory
 
-- Use domain `usa.pay.openkush.com`.
-- Payment processsor to rival Visa, Mastercard, Stripe, Square.
-- The cost of the system will be distributed equally amonst people based on the usage.
-
-### OpenBank
-
-- Use domain `usa.bank.openkush.com`.
-- Bank which is only used for debit account (checking account).
-- Can expand to savings account and take no cut from the investment.
-- The payment processor can now become independent from other banks.
-- The cost will be supported through OpenPay, since you don't want people to lose money sitting in their account.
-
-### OpenTicket
-
-- Have a ticketing system similar to Ticketmaster.
-- Only people with OpenPay/OpenBank accounts, will be able to use the service.
-
-### OpenTax
-
-- Use domain `usa.tax.openkush.com`.
-- Can be added as a feature of the bank or an independent product.
-- Convert the entire tax code to a software which makes paying taxes as simple as clicking a single button.
-
-### OpenTLD
-
--   In addition create your down top-level domain `.kush` and get free from ICANN.
-    - Create own ip standard with maybe 5 parts similar to ipv4 and more bits for each part. Use the syntax 123-234.x.x.x to signify the ip ranges. In this way the ip string will always include the 3 dots and either have two numbers in each section separated by a dash.
-
-### OpenISP
-
-- Create your own ISP.
-- Include phone number with additional digit if necessary.
-
-### OpenAuth
-
-- Auth service to let people host locally or use the provided cloud server.
-- To replace Google login.
-
-### OpenShop
-
-- Shop service similar to Amazon. Delegate the delivery to UPS, Fedex.
-- It is important for people to sell/buy products freely.
-
-### OpenPoll
-
-- Poll/voting service to let people create polls and vote on features.
-
-### OpenSocial
-
-- Social media that keeps the content only for certain timeframe.
-- The idea being social media is important to let people communicate with others in case of emergency.
-- Extend this to include chat messaging, live video (discord, slack).
-
-### OpenPhone
-
--   Create a phone with open-source blueprint and modular approach.
--   Every component can be individually purchased and integrated into the system.
--   Adventure related stuff
-    - Create a case that seals the entire phone and will help it float in case it drowns.
-    - Add attachement for satellite communication.
--   Create 2 battery variations.
-    - One that just fits.
-    - Create a thicker version, that increases the thinckness of the phone as well.
--   For every component, provide alternatives and what features are unnecessary for each System on a chip, and how each SOC feature can be enabled or disabled. Also, include option to remove the SOC.
-    - Example: Allow multiple Wifi chips to be compatible with the phone, and also having no Wifi chip at all.
-
-### OpenLaptop
-
-- Create a laptop where the cpu, ram, storage is inside the keyboard.
-- Have the keyboard be assembled so people can use their custom mechanical keys.
-- Attach monitor panels, with stands on the side so the monitor can be positioned at eye level.
-- Have detachable numpad so it can be put on either side.
-- For the trackpad area, have it as an attachable as well. The trackpad can be placed at any spot.
-
-### OpenInsurance
-
-### OpenBrowser
-
--   Create own internet specification, and club them into Internet v2.
--   Browser will not have cookies. auth/pay will be controlled by the browser. accessibility/design system will be controlled by browser.
--   In the frontend framework, use directory structure to define functionality
-    - keyboard shortcuts, event listeners (reactive programming).
-    - css modes like print, in separate file.
--   Add popular fonts to the browser.
--   Define a tree like data structure for defining the laod order of js files. Parallel branches can be fetched in parallel (similar to async).
--   For global account like in Chrome you sign in with Google, use OpenAuth or a local version.
--   After a working browser has been created. Create a clone of all the popular apps, if multiple can be consolidated into one do that. And make these part of the browser.
-
-### OpenSearchEngine
-
-- Let people go to a url and crawl the website to build their local search engine.
-- I can create my own search engine, and when users download it give them the option to remove the websites they don't need.
-
-### OpenFoodTest
-
-- A better alternative to department of health and usda, and an unbiased testing facility for food products and recommendations.
-- Add toos like calorie tracker and thenutrient breakdown of all foods you eat. Include supplementation.
-
-## OpenSaas
-
--   Find all the popular and niche SAAS and management systems and create OpenKush version of them.
--   To find industries
-    - [capterra](https://www.capterra.com/categories/)
-    - [North American Industry Classification System](https://www.census.gov/naics/?99967)
-    - [Global Industry Classification Standard](https://www.msci.com/indexes/index-resources/gics)
-
-### Laboratory Inventory Management System (LIMS)
-
--   Have the entire system in a folder. When upgrading the user just has to replace the folder. For user-created pages, they will be in a separate folder.
--   Lims system using quickjs.
--   Create an api for the entire project (this is not referring to the http api, but an api for getting info from the global config).
--   Now for the UI of the LIMS system, you query the api and build the template. In this way, you can have multiple templates for the system. Every lab can easily build their own template.
-    - Updating the software becomes easier as now you only have to update the api and if there are any breaking changes, you make the changes in the template.
-    - As part of the default template, make the all the smaller components available for people to build their template on as well.
+-   Plan
+    - Implement at AESL.
+    - Expand to other labs in College of Agriculture.
+    - Expand to other labs in UGA.
+    - Expand to other labs under USG.
+-   Setup LIMS system using single config file, excluding internal applications.
+-   Standards
+    - [ISO/IEC 17025](https://www.iso.org/ISO-IEC-17025-testing-and-calibration-laboratories.html)
+    - [ISO 9001:2026](https://www.iso.org/standard/9001)
 -   Links
     - [link](https://www.labbit.com/) labbit
+    - https://www.labmanager.com/vendors/products/lims
+    - https://www.capterra.com/laboratory-information-management-system-software/?sort=alphabetical
+    - https://limswiki.com/
+    - https://www.thelabhq.com/
 -   On instrument page, drop file and choose any needed parameters, so that the loading of data is not dependent on filename. In case of incorrect format, show example of correct format.
 -   On sample submission page for client, ask for what tests they are requested in, and then ask for the relevant information for each test. Group the input fields or data they need to provide for sample into separate groups. One group would be the "minimum information required", and then admin can create more groups. Have each test associated with multiple groups if needed. Show the groups after user has done selecting all tests.
 -   On the permissions page to control access of employees to internal pages, use glob patterns to provide access to pages for employees. Document how to use glob pattern like file name, \*, \*\*. And any performance issues.
@@ -230,141 +168,148 @@ Take inspiration from
 -   Create section to for all the word files, excel files, powerpoint files in LIMS. Use HTML to create these instead. The files will be organized by templates (with subfolders) as needed. For every HTML page, there will be an option to load previous entered data or enter new data or modify one of the old data. Save the changes with date and a comment. People can print these pages and share with people. Make these accessible as well.
 -   Prices of test change over time. The programs should reflect this, when calculating summaries and other graphs. The best way to handle is to keep the latest prices in the prices table with start and end date. If end is empty, then the price is latest. This information can also be used to consturct price changes over time. For the samples, we store the final price with the sample itself, so lookup in the price table is not necessary. And the same for when making the graphs.
 -   For managing all the instruments and PCs, create a layout of the room and place the pcs in the layout. For each pc associate it with all the hardware details and other relevant stuff. Create some protocol to keep this information up to date. Include data ports, electrical outlets and stuff like that.
+-   Payment related
+    - For sample payment, create a column in each sample which will be an array of strings. And store all the payment methods used to pay for it.
+    - Create inhouse/accounting/sample-payment-assignment page. For each sample, you specify multiple methods of payment like monthly billing and stuff like that. The page will have views that show the samples grouped by monthly county, monthly billers, each grant, inhouse. You can edit all the options by clicking modify payment for a sample.
+    - Create inhouse/accounting/sample-payment-verify. This page will go through each sample, calculate the cost from test requested. And verify if the number matches the total from the payment column. If it does not, then it shows on the page, and you can use inhouse/accounting/sample-payment-assignment to correct it (or you can have those options built in sample-payment-verify page itself).
+    - Instead of hardcoding things like grants, inhouse, county program. Make them into a plugin system. Create a page where you can create these things. You can mark an old one as deprecated and create a new one in place of that (preserve the changes, similar to pricing changes). For grants, you can check the client names or some column things. All the added options, will show up in inhouse/accounting/sample-payment-verify. Maybe call the page inhouse/accounting/create-payment-method
+-   Sample submission
+    - For sample submission create three options depositor info, client info, invoice info (you can have multiple people under each). All this info is stored in a single json column. Get people's name, address, email for each. Show options on how sample will be paid as list dropdown - online submission (show them uga's link), direct deposit at lab (show them instructions for check, credit card, cash). For counties, we can share them a special link with a query parameter as the password, that will show another option as bill specific county for monthly invoice. For people with grants, create them a special link and show them options for grant as well. Have a field in the end for "notes for accounting". here you can specify things like mark it inhouse and stuff like that.
+    - After sample is submitted, show them a link where they can modify the submission and track. They can also use the link for future submissions as well, which will auto-fill all the info.
+    - If AESL wants to modify the submission for a sample, they will have to use the same link as well. Create an application which AESL can use to find the link.
+    - If changes are made to the submission before arriving at the lab, then auto-approve. Otherwise, Create a page to approve the changes manually.
+    - For sample onboarding scan the barcode and that is it. If submission has to be modified, then open the link. Also, these changes would not have to be approved.
+-   Instrument
+    - Have a separate column for instrument data and computed data.
+    - In instruments page, create a page for contracts. This will include information on what the warranty of the instrument is, how long will the company give us free software updates, what will be the cost of upgrades if we loose the pc, or the next version of windows comes.
+-   Report
+    - In reports, add a section at bottom on the instrument info used to conduct the tests. Like min/max thresholds. The entire sample history at the lab (when it arrived, which technicians ran tests, who approved, and other meta info).
+-   Create log of all automations and when server restarts are planned. Have the report file be in a two column format. The first column being success, failure, info message, warning (all in appropriate colors). And then next to them the message.
+-   Create a debug build that has `asserts` and all other checks. So when an issue arises you reproduce it in debug mode, and find the root cause quick.
+    - Also, the debug build can have built in unit tests and such. Consider a function to create a thread. There is no reliable way to test the failure of creating the thread. So add the code that if/else that will just return false, instead of even attempting to create the thread. This code call can be co trolled through some global api.
+-   Do an overview of people job title responsibilities. Like lab manager is supposed to maintain relationship with vendors. Hr is supposed to train new employees. Hr is supposed to reach out to supervisors and have them prepare documents on the responsibilities and necessary training material for people underneath them.
+-   Feeschedule
+    - When creating feeschedule table, create static table for info like test name and test code.
+    - In feeschedule, also note down all the parameters reported for each test. If there are different categories of samples that can be submitted under a test, create separate reporting parameter lists for those.
+    - Add the min/max turnaround time.
+    - Add the workflow of the sample at the lab (like what instrumetns will be used, what verifications will be used. Essentially how the sample goes from onboarding to reporting).
+    - Add a section for tests, that the lab no longer does.
+    - For dynamic info, create a separate table, with start_date, end_date.
+    - For each test get info, on what elements to report (full name, short name, units, alternate units, instruments to run on, how early can the test be sampled, what is the turnaround time (how long it takes to run, onboard), how many days in the past the test cannot be received)
+    - Create the next 7 day list of things that are coming up (automations, peoples responsibilities)
+    - Include info on how long a sample is kept after testing, how the storage is configured.
+-   Create a page that people review at the start of the year to create schedule for the next fiscal year. For certain tests, we don't accept them 1 week before holidays. This page will create that and show to the clients on the sample submission page.
+-   Under kushaj.aesl.ces.uga.edu
+    -   Create details of every parameter that is part of the report. So if the report is for F1 and includes N, then include all the related info for it
+        - what does n mean
+        - where does it come from
+        - what is the impact
+        - what is the impact of low, high values.
+        - For example, in case of nitrate. Plants have a process to convert nitrate eventually to protein. If there is a drought, the process slows down, and there is a buildup of that, and feeding that to the animal kills it.
+-   Create a page that computes the apporximate cost to run a sample at the lab. Break down the cost from sample onboarding (like you might need to print labels), then instrument run cost. What if multile samples are run. To simplify the problem, try ignoring employee salary, and maybe electricity bill.
+-   Add mirrors at blind spot angles in the lab, so people don't bump into each otger and drop samples
+-   In lims sample label maker machine, add barcode. Scanning the barcode opens a url for sample history.
 
-#### List of LIMS
+## OpenKush
 
-- https://www.labmanager.com/vendors/products/lims
-- https://www.capterra.com/laboratory-information-management-system-software/?sort=alphabetical
-- https://limswiki.com/
-- https://www.thelabhq.com/
+-   Split list of projects into 3 sections
+    -   Development projects - Tool required to do software development
+        - OpenDesignSystem
+    -   Individual components
+        - OpenEmployeeManagement
+        - OpenAccounting
+        - OpenLIMS
+        - OpenAuth
+        - OpenCharts
+        - OpenSQL builder
+        - OpenDocumentation
+        - OpenDatabase
+    -   SAAS
+        -   OpenLaboratory
+            - List all individual components that can be used with it
+        -   OpenMuseum
+            - [link](https://www.reddit.com/r/MuseumPros/comments/xyli71/best_museum_database/) List of museum databases
+        -   OpenAgriculture
+-   Timeline page
+    - Show the timeline of work done in openkush.
+    - Create an entry for when a new version of a software is released, brief description of the software and when a new software is released
+-   Industries
+    - [Capterra](https://www.capterra.com/categories/)
+    - [North American Industry Classification System](https://www.census.gov/naics/?99967)
+    - [Global Industry Classification Standard](https://www.msci.com/indexes/index-resources/gics)
 
-#### SQL page
+## OpenAgriculture
 
--   Two rows
--   The layout fits on the screen and users will have to scroll for the overflow.
--   I am essentially helping people build the filters/transformations that data tables generally have he controls for in the table itself. But instead of building those controls int he data table itself, I have the users open this page.
--   Bottom row
-    - Show a dummy table with multiple columns and 3 rows.
-    - Add a message at top. Showing 3 rows for performance.
--   Top row
-    -   Tow column with sidebar on left to select the controls.
-        - In sidebar have a group for columns, which will list all the columns of the table. Have + , - sign next to it, to add the column in the right column.
-        - Have a metrics group, which will show things like mean, max, .... These metrics can be added for before filtering the data and/or after filtering the data.
-        - Have charts group, where users can add various charts for the columns.
-        - Have filtering group for things like, startswith, endswith, includes
-        - Have transformation group for things like toupeprcase, data type conversion, ...
-    -   In the right column, for every column added add this ui.
-        - Show the column header
-        - Show an input box, where they will essentially enter the filtering or transformation.
-        - To the righ side have an "or" and another input box. If they type into this, another "or" input would be created.
-        - To the bottom have an "and" and another input box. If they type into this, another "and" input would be created.
-        - Have different sections for filtering, transformation, metrics within each column, so that users know here to input each thing and they do not get confused.
-    -   The user can click on the things in the sidebar and it will add them to the active input box.
+-   Identify different categories like water, soil, crops.
+-   For each type, document the science required to master it.
+-   For each type, identify use cases.
+    - Water - tap water, water filtration system, desalination systems, agriculture, acquarium, ships
+-   For each use case, build 3d model to understand how these systems are constructed. Like how a tap water is built from the tap, to the pipes that carry the water. These will help identify issues that are impossible to think about just mentally.
+    - Make animation for the same.
+-   For each use case, identify the relevant analysis. Document the analysis procedure and protocols for testing and inferring results.
+-   Look up all agriculture related companies, fields (precision agriculture), research papers.
+-   Links
+    - [Farm Show Calendar](https://farmshowcalendar.com/)
+    - [agfundernews](https://agfundernews.com/) - Startups being funded
+    - [mixingbowlhub](https://www.mixingbowlhub.com/) - Companies in different sectors
+    - [agnavigator](https://www.agnavigator.com/)
+    - [future farming](https://www.futurefarming.com/)
+    - [farm bureau georgia](https://www.gfb.org/news/gfb-news-magazine)
+    - [southern ag today](https://southernagtoday.org/)
+    - [aggateway](https://aggateway.org/) - Digital standards
 
-### Agriculture SAAS
+## System Programming
 
-- What are the different types of things where agriculture related stuff is relevant (like water, soil, ...).
-- Now dig deeper into each type.
-- For water, where are all the places it is used (tap water, water filtration system, desalination systems, agriculture, acquarium, ships, ...).
-- For each use case, build a simpler 3d printed model, to understand how these systems are constructed. Like how a tap water is built from the tap, to the pipes that carry the water. These will help identify issues that are impossible to think about just mentally.
-- For each use case, identify the analysis or test that is relevant.
-- In addition to the 3d model, make an animation that can be used to teach people how the system they are using is constructed.
-- Consolidate all agriculture related software companies, precision agriculture, research papers.
-- Show how much people are saving by using this project. For every usecase, anlysis show the price from commercial companies.
+- Study Casey Muratori's _Computer, Enhance!_ course alongside books on systems programming, computer architecture, and performance.
+- Distill all of that knowledge into structured, public documentation for others to read.
 
-### Accessibility
+### x64 Manual
 
-- Works on all operating systems. Handles all file formats like Web, PDF.
+- Target Intel, AMD, ARM, and eventually RISC-V (Linux only).
+- Work through the Intel x64 manual systematically, building a utility function to inspect, check, and generate diagrams for every concept discussed (e.g., take a pointer value, decompose it into 4-level paging fields as specified by the manual, and render a diagram).
+- Document full CPU specs alongside frontend and backend microarchitecture characteristics.
+- Write hardware verification tests for every architectural claim in the manual (e.g., if the manual states a CPU has 2 read execution units, write a test to verify it—inspired by Casey's hardware tests).
 
-## VPN Performance Check
+### RAM
 
-- Use vpn to check your site performance across counties.
-- Can use aws vps as well.
+- Read RAM specs and build matching inspection utilities, diagrams, and verification tests.
+- [Motivation video](https://www.youtube.com/watch?v=KKbgulTp3FE)
 
-## Better Tech Name
+### Storage
 
--   Use domain `bettertechname.com`.
--   Come up with alternative names for GPUs/CPUs/RAM/Monitors (desktop, enterprise, mobile).
--   General strategy: bigger the number better the product.
-    - Consult research papers to understand the architecture of each product.
-    - Each product begins with the year the architecture was released not the product was released.
--   Have a (autogenerated) section for each product to explain the rationale behind the name.
--   For USB distill it down to Data and Power (D= and P=).
--   Also create SVG logos in different sizes for the new names. Smaller logos will have less/compressed info.
+- Apply the same spec-driven utilities, diagrams, and verification tests to storage.
 
-## Programming Langauge
+### Network
+
+- Apply the same spec-driven utilities, diagrams, and verification tests to networking.
+
+### Live Compiler Output
+
+- Local tool synced to the active function in your editor, showing compiler stages (Source → MIR → LLVM IR → x86-64 ASM) and an interactive assembly dependency graph.
+- Visualizes register and flag data dependencies (RAW, WAR, WAW) for the current function or basic block and highlights the critical path.
+- Lets you temporarily edit the assembly inline and watch the dependency graph, register chains, and estimated cycle latency update in real time.
+- Benchmark edited assembly snippets directly to compare estimated critical path against actual hardware cycles (_Computer, Enhance!_ style).
+- Scope v1 to x86-64 (Intel syntax), one language (Rust or C/C++), and a local-first browser UI.
+
+## Programming Langauges
 
 -   Create transpiler for programming languages to Rust. For each language look at the top libraries and transpile them as a proof of concept. Also, check performance of the transpiled to the original.
     - If a language has a specific tooling built around it, build that for the Rust version as well.
--   Create an intermediate language and transpile from that to target language.
+-   If possible, create an intermediate language and transpile from that to Rust.
+-   If necessary, limit to the latest version of the language.
+-   Fortran
+    - Start from 66 standard and work your way up (look into various compiler options also)
+    - [fortran-lang.org](https://fortran-lang.org/)
+    - [fortranwiki.org](https://fortranwiki.org/fortran/show/HomePage)
+    - Wiki has list of libraries using Fortran. Transpile them to C++, make test cases pass, test for performance to act as a proof of concept.
+    - Use the official compilers for this task.
 
-### File Formats
+## Microsoft 365 Migrate
 
-- Create a performance optimized parser (using SIMD assembly) for XML, HTML, CSS, TOML, ...
+- Write a transpiler/compiler to convert all [Microsoft 365 Apps and services](https://www.microsoft.com/en-us/microsoft-365/products-apps-services) to alternate versions.
+- Focus only on the latest version.
 
-### Fortran
-
-- Start from 66 standard and work your way up (look into various compiler options also)
-- [fortran-lang.org](https://fortran-lang.org/)
-- [fortranwiki.org](https://fortranwiki.org/fortran/show/HomePage)
-- Wiki has list of libraries using Fortran. Transpile them to C++, make test cases pass, test for performance to act as a proof of concept.
-- Use the official compilers for this task.
-
-## Database
-
--   Go through postgres documentation and create an admin panel to configure all the settings, this includes options for compiling postgres from source.
-    - For options which can take multiple values like page size, offer a testing utility which users can use to get the best value.
-    - Provide guide on meaning of all values and how to choose the appropriate one.
-    - [link](https://postgresqlco.nf/) Page listing configuration options and tuning guide.
--   Go through all the Postgre Weekly newsletters and add stuff from there.
--   Look at databases built on top of Postgres and merge their features.
--   Look at databases outside of Postgres and merge their features.
--   CLI to create josn schema of all tables, typescript format, format for other languages.
--   Some queries integrate data from previous years, and the output rarely changes. The output from previous years can be cached. Create interface where you keep track of such queries and update the cache. If intergation can be made on when was the table last modified, the update of query output can be automated.
--   Development database setup and easier way to run queries in dev mode before pushing to production. In dev mode, add methods to easily add worst case inputs for the queries. And also test for performance.
--   For migrations provide two functions for each function. How to upgrade and how to downgrade. And then it is to the user to handle the logic. The software handles the execution of these functions and can be used to roll back 100 migrations if the logic allows it.
-    - During migration we might have to look into load balancing and how to migrate when the database is really huge.
--   High availability
-    - patroni
--   Add backup testing, backup restore. Disaster recovery.
--   Have a test section to test queries like update, delete, create. The section automatically wraps the query in transaction and after you are confident you can commit the transaction.
-
-### Access
-
-- Create transpiler and tooling to migrate from Access database system.
-
-## Coding Live Documentation Viewer
-
--   When writing say Rust, depending on where cursor is, show the official documentation for that thing in a browser window. As you type, the page keeps getting updated.
--   For this to work, offline documentation would work best. And for navigation using URL (file path) would be best.
--   In addition show custom user documentation, which can include like performance characteristics of each thing, accessibility, security, usage examples, best practices.
--   Another pane can show the piece of code at different compiler stages.
--   Show the dependency graph of the assmebly for the current function or lines of code. Refer to Casey Computer Enhance course (Linking Directly to ASM for experimentation).
-    - Add the ability to modify the assembly manually (temporarily) and see how the dependency graph changes.
-
-## SEO
-
--   Combine all SEO products from [link](https://github.com/serpapi/awesome-seo-tools) into a single app.
-    - Add these as well [link](https://kushaj.com/product-design/seo).
-    - Wordpress aioseo.
--   Reference SEO notes for more ideas.
-
-### PWA
-
-- Create all things needed for PWA.
-- Checker which shows the rendering of all the options.
-
-### HTML Head Generator
-
-- To generate a template for all the tags that you can possibly enter in HTML head.
-- This can be `<meta>` tags or HTTP relevant or a function that returns the HTML.
-- Refer capo.js on how to order head elements for performance.
-
-## HTML checker
-
-- For every HTML tag check if the children tag valid. It will be a hashmap, with a key for each html tag and the value will be a set of all valid tags.
-- Show the DOM tree of the code you are working on in the documentation viewer or in a new tab.
-- Check if html tags have valid attributes.
+## ---
 
 ## Diagram
 
@@ -374,16 +319,6 @@ Take inspiration from
 - Make it work online completely client side, with option to sync to storage like google drive. Add option to share with people.
 - Create a programming language interface to draw the diagram through code.
 - Include simple diagrams, software architecture diagrams, devops diragrams, charts (look at charting libraries), graphs.
-
-## Qwik Lite
-
-- Use vite+ for qwik.
-- Add schema.org
-- Sort the tags in head.
-- Helper to view component in different sizes, zooms, and other stuff.
-- Remove all the unncessary stuff from qwik like api functions. It should just be a UI layout framework.
-- Remove npm dependency. Have all the dependencies already in node_modules folder without a need to install.
-- Integrate OpenDesignSystem and other stuff/tools you use.
 
 ## UI Library
 
@@ -413,6 +348,7 @@ Take inspiration from
 - When building a reference implementation, use vanilla css. For html write raw html tags with a comment string like "import button" in case the compone t relies on other components.
 - Now the tricky part is js.
 - Provide them a stanalone webapp, which will contain the html files used to test the styles and also to guide the users. For each setting like padding, we will show various p tags or something that is relevant to padding on the webpage to make it visually easy for the user to make the decision. Then on the page, we will have different resolutions already setup for them to see the results, so that they don't have to manually scroll.
+- For each component add an error layer. This will apply styles like red margin to the component and use "--ERROR" to provide useful error message. Strip out in production. https://www.youtube.com/watch?v=zXAXpMYnJV8. Alternatively use JS for it, or linter rules
 
 ### Markdown Editor
 
@@ -1265,34 +1201,6 @@ Take inspiration from
 - Use heuristics on digits to see if you can find the prime numbers.
 - Make an API that takes two parameters "data" and "crypto_method" and see if you can return all the necessary info to break the encryption.
 
-## x64 Manual
-
--   For intel, amd, arm, maybe risc.
--   When reading Intel manual, create utility functions to view/create diagram of the thing being discussed.
--   For example, the manual discusses 4-level paging, then given a pointer value, decompose that value into what is specified by the manual, maybe even create a diagram for it.
--   Limit the OS to Linux and later add AMD.
--   For each CPU describe the characteristics of the frontend and backend.
-    - Provide the all the spec of the CPUs as well.
--   Similar to how Casey did tests to verify the hardware, add tests for everything mentioned in the manual.
-    - If the manual says the processor has 2 read execution units, then create a test to verify that.
-
-### RAM
-
-- Read the RAM specs and create functions for those as well.
-- [link](https://www.youtube.com/watch?v=KKbgulTp3FE) motivation video.
-
-### Storage
-
-- Do same for storage specs.
-
-### Network
-
-- Do same for network specs.
-
-## OS Manual
-
-- Do something similar to [x64 Manual](#x64-manual).
-
 ## Math Constant Calculator
 
 - Create application similar to y-cruncher but with GPU acceleration and direct storage access.
@@ -1470,6 +1378,7 @@ Take inspiration from
 - Analyze zwift race and tell the optimal place for powerups, zwift specific features like supertuck that you missed
 - Add other sports like running, rowing. Have a calendar view to see overciew
 - For each activity add nutrition section, where you enter the food you brought and food you used. And it will break down everything to the micro nutrients.
+- Add a day summary, with explanation of all fields and hourly breakdowns, with option to change timescale, and overflow hours into back and previous day. Include all the activities performed in the summary page as well.
 
 ## Custom Computer Hardware
 
@@ -1581,47 +1490,6 @@ Take inspiration from
 - Record at 4k60fps, 10-bit depth, max stabilization, 4:3. Connect external battery, and bike computer to track eleveation and other data. Have a live preview of the recording to see if there are problems with the recording like dust.
 - Export to multiple formats 4:3, 16:9, 16:10, 21:9.
 
-## Website Builder Helper
+## Youtube channel
 
--   Provide a philosophy page, features page.
-    - Respect user's network bandwidth and limits.
-    - Respect user's using old hardware.
--   Have the entire project in a folder. For upgrading just replace the folder.
--   First page, shows about information related to the helper, like version numbers, changelog and stuff like that.
--   Links page, specify all the links of your website.
--   Email
-    - Look at all popular email realted tools.
-    - Create helpers with best practices and components to build a single/double column email. Look at popular templates and identify components from that as well.
--   Common file editor. Edit common files like editorconfig, .gitignore, and more from the interface. Include editor files like vscode, jetbrains as well.
--   HTML
-    -   Look at html linters and related rules.
-    -   Look at HTML spec for each tag and all the specific rules around that.
-    -   Look at populat HTML related tools.
-    -   HTML head reorder.
-    -   Help to get code for each HTML element, and how the workflow can be optimized for the use cases of the element.
-        - For table also look at using differnt font for number columns to make each digit take equal space.
-    -   Try displaying the AOM node value next to HTML element in either the editor or in the application. So you are essentially combining DOM and AOM.
-    -   When creating labels to help with accessiiblity like providing aria-label, screen readers will add text before the label. For example for `<nav>`, screen reader will announce it as `Navigation ...`. Add this default information as well, to help create labels.
-    -   Create a page for all the special characters like `&copy;`.
-    -   Add templating support to HTML to create template components similar to Go templates, and the tool can create raw HTML files from it.
-    -   Add ideas from internatiolization project. Show a page which goes through allt he strings and asks you to take screenshots and provide relevant context, which will be shared to the translators.
--   Design system
-    - Build a design system using modern css and html.
-    - Start with defining the variable.
-    - Then set the styles for each HTML element. This also acts as the reset.
-    - Include styles for different media as well, like accessibility, print.
--   CSS
-    - Add support to sort styles similar to tailwind.
--   Support printing out the entire site.
-    - CSS reset needs to support print specific styles. Printers work with CMYK space and using RGB for them is bad.
-    - Create helper for users to adjust the styles as well, like margins, spacing, ignore pages, ignore sections of a page as well.
--   https://webutils.io/category/code
-
-## C Software
-
-- Real Time Operating System
-- When importing libraries, you might have to rename functions - since C does not have namespacing.
-- Look at all the programming languages features and find what they do internally, and how that can be achived in C (in some cases C features will make it where, the additional features are not even required).
-- Implement all the standard library and popular libraries for each language in C.
-- Add comment syntax for namespacing. It can be `// namespace name start {` and `// namespace name end`.
-- Add comment syntax for async/await as well
+- For youtube channel do a whole course on computer science. Start with software engineering, then full stack web dev, then computer science specific courses, then internet v2.
